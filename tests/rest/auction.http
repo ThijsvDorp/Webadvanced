@@ -1,0 +1,6 @@
+GET{{protocol}}{{host}}:{{port}}/auctions
+
+###
+
+GET {{protocol}}{{host}}:{{port}}/auctions/15
+
