@@ -1,19 +1,10 @@
 import express from "express";
 const router = express.Router();
-import Auction from '../controllers/auctionController.js';
-//Getting all auctions
-router.get('/',async (req, res) => {
-    try{
-        const auctions = await Auction.getAuctions();
-        res.json(auctions);
-    }catch(err){
-    res.status(500).json({message: err.message})
-    }
-});
-//Getting one auction
-router.get('/:id',(req,res) => {
-res.send(req.params.id)
-});
+import auctionController from '../controllers/auctionController.js';
+
+router.get('/', auctionController.getAuctions); //Getting all auctions
+
+router.get('/:id',auctionController.getAuctionById); //Getting one auction
 //Creating an auction
 router.post('/',(req,res) => {
 
