@@ -27,6 +27,39 @@ const auctionController = {
             console.error("Error getting auction", err);
             res.status(500).json({error: "Internal server error"});
         }
+    },
+    async addAuction(req,res){
+        try{
+            const {name, price, bids, duration} = req.body;
+            const newAuction = await auctionModel.addAuction(name,price,bids,duration);
+            res.status(200).json({message: "Auction added successfully"});
+        } catch (err) {
+            console.error("Error adding auction", err);
+            res.status(500).json({error: "Internal server error"});
+        }
+    },
+    async updateAuction(req,res){
+        try{
+            const auctionId = req.params.id;
+        } catch (err) {
+            console.error("Error updating Auction", err);
+            res.status(500).json({error: "Internal server error"})
+        }
+    },
+    async deleteAuction(req,res){
+        try{
+            const auctionId = req.params.id;
+            const result = auctionModel.deleteAuction(auctionId);
+            if (result){
+                res.status(200).json({message: "Auction deleted successfully"});
+
+            } else {
+                res.status(404).json({error: "Auction not found"})
+            }
+        } catch (err) {
+            console.error("Error deleting Auction", err);
+            res.status(500).json({error: "Internal server error"})
+        }
     }
 }
     export default auctionController;

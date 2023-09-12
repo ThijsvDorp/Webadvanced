@@ -1,14 +1,22 @@
 import {auctions} from './db.js';
-
+auctions.push("Test");
+auctions.push("Test1");
+auctions.push("Test2");
 const auctionModel = {
     getAuctions(){
-        auctions.push("Test");
         return auctions.at(0);
     },
     getAuctionById(auctionId){
-        auctions.push("1");
-        auctions.push("2");
-        return auctions.at(auctionId)
+        return auctions.at(auctionId);
+    },
+    addAuction(){
+
+    },
+    updateAuction(){
+
+    },
+    deleteAuction(auctionId){
+           return auctions.splice(auctionId,1)
     }
 }
 export default auctionModel;

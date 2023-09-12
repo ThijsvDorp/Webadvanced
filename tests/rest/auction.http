@@ -1,6 +1,21 @@
 GET{{protocol}}{{host}}:{{port}}/auctions
+Accept: application/json
+
+> {%
+ client.test(
+     "Request executed successfully",
+     function(){
+         client.assert(response.status == 200, "Response status is not 200");
+     }
+ )
+ %}
 
 ###
 
 GET {{protocol}}{{host}}:{{port}}/auctions/1
 
+###
+POST {{protocol}}{{host}}:{{port}}/auctions/new
+###
+
+DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/1

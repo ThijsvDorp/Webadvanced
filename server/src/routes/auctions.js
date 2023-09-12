@@ -6,15 +6,11 @@ router.get('/', auctionController.getAuctions); //Getting all auctions
 
 router.get('/:id',auctionController.getAuctionById); //Getting one auction
 //Creating an auction
-router.post('/',(req,res) => {
-
-});
+router.post('/new',auctionController.addAuction);
 //Update an auction
 router.patch('/:id',(req,res) => {
 
 });
 //Delete an auction
-router.delete('/:id',(req,res) => {
-
-});
+router.delete('/delete/:id', auctionController.deleteAuction);
 export default router;
