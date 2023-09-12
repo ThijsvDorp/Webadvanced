@@ -1,5 +1,5 @@
 import auctionModel from '../models/auctionModel.js';
-import {users} from "../models/db.js";
+import {auctions, users} from "../models/db.js";
 const auctionController = {
     async getAuctions(req,res){
         try{
@@ -30,8 +30,8 @@ const auctionController = {
     },
     async addAuction(req,res){
         try{
-            const {name, price, bids, duration} = req.body;
-            const newAuction = await auctionModel.addAuction(name,price,bids,duration);
+            const auction = req.body;
+            const newAuction = await auctionModel.addAuction(auction);
             res.status(200).json({message: "Auction added successfully"});
         } catch (err) {
             console.error("Error adding auction", err);

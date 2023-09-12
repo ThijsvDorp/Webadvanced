@@ -9,8 +9,8 @@ const auctionModel = {
     getAuctionById(auctionId){
         return auctions.at(auctionId);
     },
-    addAuction(){
-
+    addAuction(jsonAuction){
+        auctions.push(jsonAuction);
     },
     updateAuction(){
 

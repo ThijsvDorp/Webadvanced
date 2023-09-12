@@ -15,7 +15,28 @@ Accept: application/json
 GET {{protocol}}{{host}}:{{port}}/auctions/1
 
 ###
+
 POST {{protocol}}{{host}}:{{port}}/auctions/new
+Content-Type: application/json
+
+{
+  "name": "Kaas",
+  "price": 5,
+  "bids":5,
+  "duration":55
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function(){
+
+        }
+    )
+%}
 ###
 
+PATCH {{protocol}}{{host}}:{{port}}/1
+
+###
 DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/1
