@@ -12,8 +12,8 @@ const auctionModel = {
     addAuction(jsonAuction){
         auctions.push(jsonAuction);
     },
-    updateAuction(){
-
+    updateAuction(auctionId, jsonAuction){
+    auctions.at(auctionId).push(jsonAuction);
     },
     deleteAuction(auctionId){
            return auctions.splice(auctionId,1)

@@ -69,7 +69,6 @@ The requirements for this project have been split into functional and non-functi
 - [ ] As an administrator I want to be able to log in, so I can maintain the auction site.
 - [ ] As a user I want to be able to log in, so I can place bids
 - [ ] As a user I want to be able to place a bid on an auction, so I have a chance of winning the item
-- [ ] As a user I want to be able to remove my bid, so I can correct any mistakes 
 - [ ] As I want to see a list of all auctions I won, so I can see how much I have to pay
 - [ ] As a user I want to see a countdown of the number of days, hours, minutes and seconds I have left to bid
 
