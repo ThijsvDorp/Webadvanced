@@ -32,7 +32,11 @@ const auctionController = {
         try{
             const auction = req.body;
             const newAuction = await auctionModel.addAuction(auction);
-            res.status(200).json({message: "Auction added successfully"});
+            if (newAuction){
+                res.status(200).json({message: "Auction added successfully"});
+            } else {
+                res.status(404).json({error: "Can't create auction"})
+            }
         } catch (err) {
             console.error("Error adding auction", err);
             res.status(500).json({error: "Internal server error"});
@@ -41,6 +45,13 @@ const auctionController = {
     async updateAuction(req,res){
         try{
             const auctionId = req.params.id;
+            const auction = req.body;
+            const auctionUpdate = await auctionModel.updateAuction(auctionId, auction);
+            if (auctionUpdate){
+                res.status(200).json(auctionUpdate);
+            } else {
+                res.status(404).json({error: "Auction not found"})
+            }
         } catch (err) {
             console.error("Error updating Auction", err);
             res.status(500).json({error: "Internal server error"})

@@ -1,5 +1,5 @@
 <script>
-    import Counter from '../lib/Counter.svelte';
+    import Counter from '../components/counter.svelte';
 
     export let params;
 </script>

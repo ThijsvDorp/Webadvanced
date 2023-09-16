@@ -36,7 +36,15 @@ Content-Type: application/json
 %}
 ###
 
-PATCH {{protocol}}{{host}}:{{port}}/1
+PATCH {{protocol}}{{host}}:{{port}}/auctions/update/1
+Content-Type: application/json
+
+{
+"name": "Test1",
+"price":"6",
+"bids":"1",
+"duration":"1"
+}
 
 ###
 DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/1
