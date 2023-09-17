@@ -33,6 +33,7 @@ const auctionController = {
             const auction = req.body;
             const newAuction = await auctionModel.addAuction(auction);
             if (newAuction){
+                console.log("New auction has been added:", newAuction);
                 res.status(200).json({message: "Auction added successfully"});
             } else {
                 res.status(404).json({error: "Can't create auction"})
@@ -47,8 +48,9 @@ const auctionController = {
             const auctionId = req.params.id;
             const auction = req.body;
             const auctionUpdate = await auctionModel.updateAuction(auctionId, auction);
-            if (auctionUpdate){
-                res.status(200).json(auctionUpdate);
+            console.log(auctionUpdate);
+            if (auctionUpdate === auction){
+                res.status(200).json({message: "Auction updated successfully"});
             } else {
                 res.status(404).json({error: "Auction not found"})
             }
@@ -61,10 +63,9 @@ const auctionController = {
         try{
             const auctionId = req.params.id;
             const result = auctionModel.deleteAuction(auctionId);
-            if (result){
+            if (result.length > 0){
                 res.status(200).json({message: "Auction deleted successfully"});
-
-            } else {
+            } else{
                 res.status(404).json({error: "Auction not found"})
             }
         } catch (err) {

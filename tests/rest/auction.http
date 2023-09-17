@@ -36,6 +36,7 @@ Content-Type: application/json
 %}
 ###
 
+### Update a auction with id 1 (Should be 200)
 PATCH {{protocol}}{{host}}:{{port}}/auctions/update/1
 Content-Type: application/json
 
@@ -47,4 +48,31 @@ Content-Type: application/json
 }
 
 ###
+
+###Update a auction with id 'y' (Should be 404)
+PATCH {{protocol}}{{host}}:{{port}}/auctions/update/y
+Content-Type: application/json
+
+{
+  "name": "Test1",
+  "price":"6",
+  "bids":"1",
+  "duration":"1"
+}
+
+###
 DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/1
+
+###
+
+DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/5
+Accept: application/json
+
+> {%
+    client.test(
+        "Bad Delete Test",
+        function(){
+            client.assert(response.status == 404, "Response status is not 404");
+        }
+    )
+%}

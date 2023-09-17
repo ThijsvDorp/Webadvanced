@@ -1,5 +1,5 @@
 <script>
-  import logo from './assets/svelte.png'
+  import logo from './assets/svelte.png';
   import router from 'page';
 
   import Home from "./pages/Home.svelte";

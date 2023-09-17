@@ -7,20 +7,29 @@ const auctionModel = {
     getAuctions(){
         return auctions.at(0);
     },
+
     getAuctionById(auctionId){
         return auctions.at(auctionId);
     },
+
     addAuction(jsonAuction){
+        const initLength = auctions.length;
         auctions.push(jsonAuction);
-        return jsonAuction;
+        if (auctions.length > initLength){
+            return jsonAuction;
+        }
     },
+
     updateAuction(auctionId, jsonAuction){
-        auctions.push(jsonAuction);
-    auctions.at(auctionId).replace(jsonAuction);
-    return jsonAuction;
+        const oldValue = auctions[auctionId];
+        if (auctions[auctionId] !== oldValue || auctionId < auctions.length){
+            auctions[auctionId] = jsonAuction;
+            return auctions[auctionId];
+        }
     },
+
     deleteAuction(auctionId){
-           return auctions.splice(auctionId,1)
+        return auctions.splice(auctionId,1)
     }
 }
 export default auctionModel;
