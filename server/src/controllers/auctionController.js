@@ -1,5 +1,6 @@
 import auctionModel from '../models/auctionModel.js';
 import {auctions, users} from "../models/db.js";
+import escapeHtml from 'escape-html';
 const auctionController = {
     async getAuctions(req,res){
         try{
@@ -16,7 +17,8 @@ const auctionController = {
     },
     async getAuctionById(req,res){
         try{
-            const auctionId = req.params.id;
+            const auctionId = escapeHtml(req.params.id);
+            console.log(auctionId);
             const auction = await auctionModel.getAuctionById(auctionId);
             if (auction){
                 res.status(200).json(auction);

@@ -1,5 +1,5 @@
 import {auctions} from './db.js';
-import {json} from "express";
+
 auctions.push("Test");
 auctions.push("Test1");
 auctions.push("Test2");

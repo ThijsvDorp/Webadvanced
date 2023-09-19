@@ -1,12 +1,7 @@
 import express from 'express';
+import authController from "../controllers/authController.js";
 const router = express.Router();
 
-router.post("/", async (req, res) => {
-    // @todo check the credentials and return an appropriate response
-    // For testing purposes a dummy token is returned.
-    res.json({
-        "token": "dummyt0k3nv4lu3!"
-    })
-});
+router.post("/login",authController.login);
 
 export default router;

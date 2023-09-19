@@ -1,7 +1,7 @@
 ###
 ### Retrieve a token that can be used for calls requiring authentication
 ###
-POST {{protocol}}{{host}}:{{port}}/auth
+POST {{protocol}}{{host}}:{{port}}/auth/login
 Content-Type: application/json
 Accept: application/json
 
