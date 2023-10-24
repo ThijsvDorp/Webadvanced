@@ -1,9 +1,15 @@
+import jwt from "jsonwebtoken";
 const loggedIn = (req,res,next) => {
-  /*  if (){
+    const authHeader = req.headers['authorization']
+    const token = authHeader && authHeader.split(' ')[1]
+    console.log(token)
+    if (!token){
+        return res.status(401).json({message: "Unauthorized: Token is missing."})
+    }
+    jwt.verify(token, process.env.MY_SECRET, (err, decodedUser) => {
+
+        req.user = decodedUser;
         next();
-    } else {
-        res.status(401).send({message: "User is not logged in!"})
-    }*/
-    next();
+    })
 }
 export default loggedIn;

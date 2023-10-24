@@ -18,6 +18,7 @@ GET {{protocol}}{{host}}:{{port}}/auctions/1
 
 POST {{protocol}}{{host}}:{{port}}/auctions/new
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6IiQyYiQxMCRLRk5tOVVxa2UyZXlwb2JuVlNrZW4uM3RuTENLNFFBMUYwYTFiUWx2MFhYdUVoblVGT2lDNiIsImlhdCI6MTY5ODE0NzU0NCwiZXhwIjoxNjk4MTUxMTQ0fQ.MOZ767JyCcRZxobFw8B7boilkiSFjLyqySyOAjXyoe8
 
 {
   "name": "Kaas",
@@ -25,6 +26,7 @@ Content-Type: application/json
   "bids":5,
   "duration":55
 }
+
 
 > {%
     client.test(
@@ -34,11 +36,14 @@ Content-Type: application/json
         }
     )
 %}
+
 ###
 
 ### Update a auction with id 1 (Should be 200)
+
 PATCH {{protocol}}{{host}}:{{port}}/auctions/update/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6IiQyYiQxMCRWSk9yZC9pRG1oVGguTXpwNlVqc2JlRHAvcUlQL1BaQy5QT1hVak04Q3QzR2dTc1BvNGJHMiIsImlhdCI6MTY5ODE3OTg1MCwiZXhwIjoxNjk4MTgzNDUwfQ.lq5ie2K_mL2pqomKs7LQz8pzaDe7XcjWXqAIyAxs3vE
 
 {
 "name": "Test1",
@@ -52,6 +57,7 @@ Content-Type: application/json
 ###Update a auction with id 'y' (Should be 404)
 PATCH {{protocol}}{{host}}:{{port}}/auctions/update/y
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
   "name": "Test1",
@@ -59,7 +65,9 @@ Content-Type: application/json
   "bids":"1",
   "duration":"1"
 }
-
+> {%
+    client.global.set("token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6IiQyYiQxMCRLRk5tOVVxa2UyZXlwb2JuVlNrZW4uM3RuTENLNFFBMUYwYTFiUWx2MFhYdUVoblVGT2lDNiIsImlhdCI6MTY5ODE0NzU0NCwiZXhwIjoxNjk4MTUxMTQ0fQ.MOZ767JyCcRZxobFw8B7boilkiSFjLyqySyOAjXyoe8");
+%}
 ###
 DELETE {{protocol}}{{host}}:{{port}}/auctions/delete/1
 

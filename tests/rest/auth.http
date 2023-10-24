@@ -7,18 +7,13 @@ Accept: application/json
 
 {
   "username": "user",
-  "password": "pass"
+  "password": "passsword"
 }
-
-> {%
-client.global.set("token", "m1jnH3l3L4ng3en5uperV31l!geT0ken");
-%}
-
 
 ###
 ### Invalidate the token
 ###
-DELETE {{protocol}}{{host}}:{{port}}/auth
+DELETE {{protocol}}{{host}}:{{port}}/auth/logout
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer {{token}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIiLCJwYXNzd29yZCI6IiQyYiQxMCQwOUN3OHRPb1hLMHE4d0I2QkRIYTR1VkxTanlpdER1bHBXZ29nM2dPQ1pDTEpJSE52T1FNVyIsImlhdCI6MTY5ODE1NjUxMSwiZXhwIjoxNjk4MTU2NTI2fQ.YBb9pjwWK5ZdgyKDBrmASgJbcIbUH1hwXucMUl4TuuI
