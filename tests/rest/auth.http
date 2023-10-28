@@ -1,13 +1,13 @@
 ###
 ### Retrieve a token that can be used for calls requiring authentication
 ###
-POST {{protocol}}{{host}}:{{port}}/auth/login
+POST {{protocol}}{{host}}:{{port}}/user/login
 Content-Type: application/json
 Accept: application/json
 
 {
-  "username": "user",
-  "password": "passsword"
+  "username": "admin",
+  "password": "password"
 }
 
 ###

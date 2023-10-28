@@ -1,18 +1,16 @@
 import express from 'express';
 import logTime from './middleware/log-time.js';
+import userRoute from './routes/userRoute.js';
+import auctionRoute from './routes/auctionRoute.js';
 const app = express()
 const port = 3000
-
-import auth from './routes/auth.js';
-import auctions from './routes/auctions.js';
-//Tell the app to use JSON
-app.use(express.json());
-app.use(logTime);
+app.use(express.json()); //Tell the app to use JSON.
+app.use(logTime); //Sends a Date to the console whenever there is a HTTP request.
 
 //All the different routes imported.
-app.use("/auth", auth);
-app.use("/auctions",auctions)
-
+app.use("/user", userRoute);
+app.use("/auction",auctionRoute);
+//Start server
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

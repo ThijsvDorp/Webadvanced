@@ -1,0 +1,133 @@
+//Admin login (to get authentication and role check)
+POST http://localhost:3000/user/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+> {%
+client.test("User logged in successfully", function() {
+client.assert(response.status === 200, "Response status is not 200");
+const responseBody = response.body;
+client.global.set("token", responseBody.token);  // Token opslaan voor later gebruik
+client.assert(client.global.get('token') === responseBody.token)
+});
+%}
+###
+// Good Weather Test voor GET /auctions - Succesvolle aanvraag moet een statuscode 200 retourneren
+GET {{protocol}}{{host}}:{{port}}/auction
+Accept: application/json
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function(){
+            client.assert(response.status == 200, "Response status is not 200");
+        }
+    )
+%}
+
+###
+
+// Good Weather Test voor GET /auctions/1 - Succesvolle aanvraag moet een statuscode 200 retourneren
+GET {{protocol}}{{host}}:{{port}}/auction/1
+
+###
+
+// Good Weather Test voor POST /auctions/ - Succesvolle aanvraag moet een statuscode 200 retourneren
+POST {{protocol}}{{host}}:{{port}}/auction/
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Kaas",
+  "price": 5,
+  "bids": 5,
+  "duration": 55
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function(){
+            client.assert(response.status == 200, "Response status is not 200");
+        }
+    )
+%}
+
+###
+
+// Good Weather Test voor PATCH /auctions/update/1 - Succesvolle aanvraag moet een statuscode 200 retourneren
+PATCH {{protocol}}{{host}}:{{port}}/auction/1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 4,
+  "name": "Auction 1",
+  "description": "Dit is een veiling",
+  "startPrice": 0,
+  "endTime": "",
+  "categories": {
+
+  },
+  "bids": [
+    {"bidAmount": 1, "userId": "1"},
+    {"bidAmount": 2, "userId": "2"},
+    {"bidAmount": 3, "userId": "3"}
+  ]
+}
+
+###
+
+// Bad Weather Test voor PATCH /auction/y - Aanvraag met ongeldig veiling-ID moet een statuscode 404 retourneren
+PATCH {{protocol}}{{host}}:{{port}}/auction/y
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": 4,
+  "name": "Auction 1",
+  "description": "Dit is een veiling",
+  "startPrice": 0,
+  "endTime": "",
+  "categories": {
+
+  },
+  "bids": [
+    {"bidAmount": 1, "userId": "1"},
+    {"bidAmount": 2, "userId": "2"},
+    {"bidAmount": 3, "userId": "3"}
+  ]
+}
+
+> {%
+    client.test(
+        "Request executed successfully",
+        function(){
+            client.assert(response.status == 404, "Response status is not 404");
+        }
+    )
+%}
+
+###
+
+// Good Weather Test DELETE /auction/1 - Succesvolle aanvraag moet een statuscode 200 retourneren
+DELETE {{protocol}}{{host}}:{{port}}/auction/1
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+> {%
+    client.test(
+        "Bad Delete Test",
+        function(){
+            client.assert(response.status == 200, "Response status is not 200");
+        }
+    )
+%}

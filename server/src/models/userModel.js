@@ -1,7 +1,7 @@
 import {users} from './db.js';
 import bcrypt from 'bcrypt';
 
-const authModel = {
+const userModel = {
 
     async comparePassword(password, hash) {
         return bcrypt.compare(password, hash);
@@ -17,4 +17,4 @@ const authModel = {
         return users.find(password);
     }
 }
-export default authModel;
+export default userModel;

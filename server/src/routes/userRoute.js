@@ -1,10 +1,10 @@
 import express from 'express';
-import authController from "../controllers/authController.js";
+import userController from "../controllers/UserController.js";
 import jwt from "jsonwebtoken";
 import loggedIn from "../middleware/logged-in.js";
 const router = express.Router();
 
-router.post("/login",authController.login);
-//router.delete("/logout", authController.)
+router.post("/login",userController.login);
+//router.delete("/logout", userController.)
 
 export default router;

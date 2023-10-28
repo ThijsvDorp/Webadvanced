@@ -65,10 +65,11 @@ const auctionController = {
         try{
             const auctionId = req.params.id;
             const result = auctionModel.deleteAuction(auctionId);
-            if (result.length > 0){
+            if (result){
                 res.status(200).json({message: "Auction deleted successfully"});
             } else{
                 res.status(404).json({error: "Auction not found"})
+
             }
         } catch (err) {
             console.error("Error deleting Auction", err);

@@ -1,11 +1,9 @@
 import {auctions} from './db.js';
 
-auctions.push("Test");
-auctions.push("Test1");
-auctions.push("Test2");
+
 const auctionModel = {
     getAuctions(){
-        return auctions.at(0);
+        return auctions;
     },
 
     getAuctionById(auctionId){
@@ -29,7 +27,14 @@ const auctionModel = {
     },
 
     deleteAuction(auctionId){
-        return auctions.splice(auctionId,1)
+        const index = auctions.findIndex(auction => auction.id === Number(auctionId))
+        console.log("Index delete auction: ",index)
+        if (index !== -1){
+           const deleted = auctions.splice(index,1);
+            console.log(deleted)
+            return true;
+        }
+            return false;
     }
 }
 export default auctionModel;
