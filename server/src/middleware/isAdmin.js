@@ -5,7 +5,9 @@ const isAdmin = (req, res, next) => {
 
     if (user.role !== 'admin'){
         return res.status(403).json({error: "Requires admin role!"})
+    } else{
+        next();
     }
-    next();
+
 }
 export default isAdmin;

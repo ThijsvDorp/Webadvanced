@@ -5,6 +5,6 @@ import loggedIn from "../middleware/logged-in.js";
 const router = express.Router();
 
 router.post("/login",userController.login);
-//router.delete("/logout", userController.)
+router.delete("/logout", userController.logOut);
 
 export default router;

@@ -6,8 +6,8 @@ const loggedIn = (req,res,next) => {
         return res.status(401).json({message: "Unauthorized: Token is missing."})
     }
     jwt.verify(token, process.env.MY_SECRET, (err, decodedUser) => {
+        if (err) return res.status(403).json({message: "Unauthorized: Token is invalid."});
         req.user = decodedUser
-        console.log(decodedUser)
         next();
     })
 }

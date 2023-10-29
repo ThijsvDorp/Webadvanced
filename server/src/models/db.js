@@ -80,5 +80,7 @@ users.push({
     password: password,
     role: "admin"
 })
-export {auctions,users};
+const refreshTokens = [];
+
+export {auctions,users, refreshTokens};
 
