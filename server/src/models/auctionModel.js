@@ -35,6 +35,12 @@ const auctionModel = {
             return true;
         }
             return false;
+    },
+    addBid(auctionId, bid){
+        const auction = auctions.at(auctionId);
+        console.log(bid)
+        auction.bids.push(bid);
+        return auction.bids.includes(bid);
     }
 }
 export default auctionModel;

@@ -20,6 +20,7 @@ client.assert(client.global.get('token') === responseBody.token)
 // Good Weather Test voor GET /auctions - Succesvolle aanvraag moet een statuscode 200 retourneren
 GET {{protocol}}{{host}}:{{port}}/auction
 Accept: application/json
+Authorization: Bearer {{token}}
 
 > {%
     client.test(
@@ -34,7 +35,8 @@ Accept: application/json
 
 // Good Weather Test voor GET /auctions/1 - Succesvolle aanvraag moet een statuscode 200 retourneren
 GET {{protocol}}{{host}}:{{port}}/auction/1
-
+Accept: application/json
+Authorization: Bearer {{token}}
 ###
 
 // Good Weather Test voor POST /auctions/ - Succesvolle aanvraag moet een statuscode 200 retourneren

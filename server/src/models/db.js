@@ -27,9 +27,6 @@ const auctions= [
 
         },
         bids: [
-            {bidAmount: 1, userId: '1'},
-            {bidAmount: 2, userId: '2'},
-            {bidAmount: 3, userId: '3'}
         ]
     },
     {

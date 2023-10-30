@@ -1,68 +1,68 @@
-PATCH http://localhost:3000/auction/1
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T161446.200.json
+
+###
+
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T161443.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTMzODEsImV4cCI6MTY5ODY1NDI4MX0.JAXXqgqJraDWWW5omKYDxLDQfElYHAlugenrJlYeea8
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100,
+  "userId": 2
 }
 
-<> 2023-10-30T090951.401.json
+<> 2023-10-30T161440.200.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTMzODEsImV4cCI6MTY5ODY1NDI4MX0.JAXXqgqJraDWWW5omKYDxLDQfElYHAlugenrJlYeea8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2023-10-30T161417.200.json
+
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTMzODEsImV4cCI6MTY5ODY1NDI4MX0.JAXXqgqJraDWWW5omKYDxLDQfElYHAlugenrJlYeea8
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T090945.200.json
+<> 2023-10-30T161414.200.json
 
 ###
 
@@ -79,46 +79,41 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T090941.200.json
+<> 2023-10-30T161410.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI3NjEsImV4cCI6MTY5ODY1MzY2MX0.zorw-nh1EECH0PnVBi2qmwpoBs5hIKAx2d13ltPaihw
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg2NjgsImV4cCI6MTY5ODY3OTU2OH0.6EZvgoOzKK0TmiJ3FRRPznC5yrt2pVPdpsgFv6Zx9Fg
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085924.401.json
+<> 2023-10-30T161404.403.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI3NjEsImV4cCI6MTY5ODY1MzY2MX0.zorw-nh1EECH0PnVBi2qmwpoBs5hIKAx2d13ltPaihw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg2NjgsImV4cCI6MTY5ODY3OTU2OH0.6EZvgoOzKK0TmiJ3FRRPznC5yrt2pVPdpsgFv6Zx9Fg
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "bidAmount": 100
+}
+
+<> 2023-10-30T161111.200.json
 
 ###
 
@@ -135,76 +130,52 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085921.200.json
+<> 2023-10-30T161108.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI2NTMsImV4cCI6MTY5ODY1MzU1M30.OlmX5VNQdCjuiw6F8AHnRwVLJiOW_XGVOzETo1LAKTg
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg1OTUsImV4cCI6MTY5ODY3OTQ5NX0.kbqUBvgo94YLJeKJHI6suEcnefrk-g_tgBQb-fOnym4
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085918.401.json
+<> 2023-10-30T161040.403.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI2NTMsImV4cCI6MTY5ODY1MzU1M30.OlmX5VNQdCjuiw6F8AHnRwVLJiOW_XGVOzETo1LAKTg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg1OTUsImV4cCI6MTY5ODY3OTQ5NX0.kbqUBvgo94YLJeKJHI6suEcnefrk-g_tgBQb-fOnym4
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2023-10-30T161001.200.json
+
 ###
 
-DELETE http://localhost:3000/user/logout
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI2NTMsImV4cCI6MTY5ODY1MzU1M30.OlmX5VNQdCjuiw6F8AHnRwVLJiOW_XGVOzETo1LAKTg
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg1OTUsImV4cCI6MTY5ODY3OTQ5NX0.kbqUBvgo94YLJeKJHI6suEcnefrk-g_tgBQb-fOnym4
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-###
+{
+  "bidAmount": 100
+}
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI2NTMsImV4cCI6MTY5ODY1MzU1M30.OlmX5VNQdCjuiw6F8AHnRwVLJiOW_XGVOzETo1LAKTg
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI2NTMsImV4cCI6MTY5ODY1MzU1M30.OlmX5VNQdCjuiw6F8AHnRwVLJiOW_XGVOzETo1LAKTg
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
+<> 2023-10-30T160959.200.json
 
 ###
 
@@ -221,85 +192,24 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085733.200.json
+<> 2023-10-30T160955.200.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1OTAsImV4cCI6MTY5ODY1MzQ5MH0.B-HuvvzoEM-6vLTYifxHl-Byve6gAKNjG_fD5oiOAi8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-PATCH http://localhost:3000/auction/1
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1OTAsImV4cCI6MTY5ODY1MzQ5MH0.B-HuvvzoEM-6vLTYifxHl-Byve6gAKNjG_fD5oiOAi8
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg0ODksImV4cCI6MTY5ODY3OTM4OX0.Z77f_tPjTj_anA6B4BFQ5FR1vNuSObp31Or3Aod63hQ
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085713.403.json
-
-###
-
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1OTAsImV4cCI6MTY5ODY1MzQ5MH0.B-HuvvzoEM-6vLTYifxHl-Byve6gAKNjG_fD5oiOAi8
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-PATCH http://localhost:3000/auction/1
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1OTAsImV4cCI6MTY5ODY1MzQ5MH0.B-HuvvzoEM-6vLTYifxHl-Byve6gAKNjG_fD5oiOAi8
-Content-Length: 262
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
-}
-
-<> 2023-10-30T085633.200.json
+<> 2023-10-30T160812.200.json
 
 ###
 
@@ -316,85 +226,35 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085630.200.json
+<> 2023-10-30T160809.200.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1NjAsImV4cCI6MTY5ODY1MzQ2MH0.S6Yt_MlIuIj707Ym2kYSlq_TANmMGJF5myvOqFsu9Ls
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzgwNTEsImV4cCI6MTY5ODY3ODk1MX0.TNCbr4qz8HCXzWn-fN2j3ksyA0Tz6jGIMC2NA8t9i7o
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-###
-
-PATCH http://localhost:3000/auction/1
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1NjAsImV4cCI6MTY5ODY1MzQ2MH0.S6Yt_MlIuIj707Ym2kYSlq_TANmMGJF5myvOqFsu9Ls
-Content-Length: 262
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
-}
-
-<> 2023-10-30T085610.200.json
+<> 2023-10-30T160055.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1NjAsImV4cCI6MTY5ODY1MzQ2MH0.S6Yt_MlIuIj707Ym2kYSlq_TANmMGJF5myvOqFsu9Ls
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzgwNTEsImV4cCI6MTY5ODY3ODk1MX0.TNCbr4qz8HCXzWn-fN2j3ksyA0Tz6jGIMC2NA8t9i7o
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085607.200.json
-
-###
-
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI1NjAsImV4cCI6MTY5ODY1MzQ2MH0.S6Yt_MlIuIj707Ym2kYSlq_TANmMGJF5myvOqFsu9Ls
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
+<> 2023-10-30T160053.200.json
 
 ###
 
@@ -411,105 +271,102 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085600.200.json
+<> 2023-10-30T160051.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085557.403.json
+<> 2023-10-30T160048.403.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2023-10-30T160047.403.json
+
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2023-10-30T155949-1.200.json
+
 ###
 
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2023-10-30T155949.200.json
+
 ###
 
-PATCH http://localhost:3000/auction/1
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T155943.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085352-1.200.json
+<> 2023-10-30T155941.200.json
 
 ###
 
-DELETE http://localhost:3000/user/logout
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MzIsImV4cCI6MTY5ODY1MzMzMn0.BnVWk6V75_dai2KEMt0IZf7Slu2MY7mbsh0drLUz6WE
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc5NzQsImV4cCI6MTY5ODY3ODg3NH0.wXpqLtQyD4le9TeSXYblb4jRP3h2hz2lo5LUnFp-f40
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "bidAmount": 100
+}
+
+<> 2023-10-30T155938.404.json
 
 ###
 
@@ -526,75 +383,63 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085352.200.json
+<> 2023-10-30T155934.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc3OTAsImV4cCI6MTY5ODY3ODY5MH0.iyHASxdq9Qx1HK2pPaXUjRtN0MmUsf07AkFKq0Fu2nQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T155705.200.json
+
+###
+
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc3OTAsImV4cCI6MTY5ODY3ODY5MH0.iyHASxdq9Qx1HK2pPaXUjRtN0MmUsf07AkFKq0Fu2nQ
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T155703.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MTEsImV4cCI6MTY5ODY1MzMxMX0.D-PoSUa9uW2efdPHKU55YaYZcmN46cFe5Evq0YInnQs
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc3OTAsImV4cCI6MTY5ODY3ODY5MH0.iyHASxdq9Qx1HK2pPaXUjRtN0MmUsf07AkFKq0Fu2nQ
+Content-Length: 22
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100
 }
 
-<> 2023-10-30T085347.200.json
+<> 2023-10-30T155659.200.json
 
 ###
 
-PATCH http://localhost:3000/auction/1
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MTEsImV4cCI6MTY5ODY1MzMxMX0.D-PoSUa9uW2efdPHKU55YaYZcmN46cFe5Evq0YInnQs
-Content-Length: 262
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzc3OTAsImV4cCI6MTY5ODY3ODY5MH0.iyHASxdq9Qx1HK2pPaXUjRtN0MmUsf07AkFKq0Fu2nQ
+Content-Length: 23
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "id": 4,
-  "name": "Auction 1",
-  "description": "Dit is een veiling",
-  "startPrice": 0,
-  "endTime": "",
-  "categories": {
-
-  },
-  "bids": [
-    {"bidAmount": 1, "userId": "1"},
-    {"bidAmount": 2, "userId": "2"},
-    {"bidAmount": 3, "userId": "3"}
-  ]
+  "bidAmount": 100,
 }
 
-<> 2023-10-30T085344.200.json
-
-###
-
-DELETE http://localhost:3000/user/logout
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NTI0MTEsImV4cCI6MTY5ODY1MzMxMX0.D-PoSUa9uW2efdPHKU55YaYZcmN46cFe5Evq0YInnQs
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
+<> 2023-10-30T155652.400.html
 
 ###
 
@@ -611,279 +456,277 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "password": "password"
 }
 
-<> 2023-10-30T085331.200.json
+<> 2023-10-30T155631.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4NzAsImV4cCI6MTY5ODY3Njc3MH0.UuvfDnG1BAe6d1NYDuNmpAd7ksf-NbFFoSEkLPBo_Lg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152441.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4NzAsImV4cCI6MTY5ODY3Njc3MH0.UuvfDnG1BAe6d1NYDuNmpAd7ksf-NbFFoSEkLPBo_Lg
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "bidAmount": 100,
+  "userId": 1
 }
 
-<> 2023-09-29T112115.200.json
+<> 2023-10-30T152439.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4NzAsImV4cCI6MTY5ODY3Njc3MH0.UuvfDnG1BAe6d1NYDuNmpAd7ksf-NbFFoSEkLPBo_Lg
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152434.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4NzAsImV4cCI6MTY5ODY3Njc3MH0.UuvfDnG1BAe6d1NYDuNmpAd7ksf-NbFFoSEkLPBo_Lg
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "bidAmount": 100,
+  "userId": 1
 }
 
-<> 2023-09-29T111732.200.json
+<> 2023-10-30T152433.404.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/user/login
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Content-Length: 51
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "username": "admin",
+  "password": "password"
 }
 
-<> 2023-09-29T110729.200.json
+<> 2023-10-30T152430.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4MTUsImV4cCI6MTY5ODY3NjcxNX0.xMX7w-vzgYmXjEd_BCGjyRr3zGhvsG6uA0xAb1OO9PU
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "bidAmount": 100,
+  "userId": 1
 }
 
-<> 2023-09-29T110315.200.json
+<> 2023-10-30T152343.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU4MTUsImV4cCI6MTY5ODY3NjcxNX0.xMX7w-vzgYmXjEd_BCGjyRr3zGhvsG6uA0xAb1OO9PU
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152337.200.json
+
+###
+
+POST http://localhost:3000/user/login
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Content-Length: 51
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "username": "admin",
+  "password": "password"
 }
 
-<> 2023-09-29T110251.200.json
+<> 2023-10-30T152335.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU3NDUsImV4cCI6MTY5ODY3NjY0NX0.jxTGAm8ceKzCMa6YQE7uNpR2EfoA8LFK74vbGudLmss
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152234.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU3NDUsImV4cCI6MTY5ODY3NjY0NX0.jxTGAm8ceKzCMa6YQE7uNpR2EfoA8LFK74vbGudLmss
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "bidAmount": 100,
+  "userId": 1
 }
 
-<> 2023-09-29T105844.401.json
+<> 2023-10-30T152232.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU3NDUsImV4cCI6MTY5ODY3NjY0NX0.jxTGAm8ceKzCMa6YQE7uNpR2EfoA8LFK74vbGudLmss
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152227.200.json
+
+###
+
+POST http://localhost:3000/user/login
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Content-Length: 51
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "username": "admin",
+  "password": "password"
 }
 
-<> 2023-09-29T104543.401.json
+<> 2023-10-30T152225.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152140.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
+Content-Length: 37
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "bidAmount": 100,
+  "userId": 1
 }
 
-<> 2023-09-29T104529.401.json
+<> 2023-10-30T152138.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152057.200.json
+
+###
+
+GET http://localhost:3000/auction/1
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152054.200.json
+
+###
+
+POST http://localhost:3000/auction/1/bid
 Content-Type: application/json
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T152053.200.json
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+Accept: application/json
+Content-Length: 51
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 {
-  "username": "user",
-  "password": "pass"
+  "username": "admin",
+  "password": "password"
 }
 
-<> 2023-09-29T104519.500.json
+<> 2023-10-30T152051.200.json
 
 ###
 
-POST http://localhost:3000/auth/login
-Content-Type: application/json
+GET http://localhost:3000/auction/1
 Accept: application/json
-Content-Length: 46
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU1NTIsImV4cCI6MTY5ODY3NjQ1Mn0.95pC3SgFVPCuXfP0DxT7LM0uhdbznrMQeeRoL4cEOHk
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T104511.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T095002.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T094957.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T094946.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T094934.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T094912.500.json
-
-###
-
-POST http://localhost:3000/auth/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 46
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "user",
-  "password": "pass"
-}
-
-<> 2023-09-29T094907.500.json
+<> 2023-10-30T152047.403.json
 
 ###
 

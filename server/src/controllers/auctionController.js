@@ -18,7 +18,6 @@ const auctionController = {
     async getAuctionById(req,res){
         try{
             const auctionId = escapeHtml(req.params.id);
-            console.log(auctionId);
             const auction = await auctionModel.getAuctionById(auctionId);
             if (auction){
                 res.status(200).json(auction);
@@ -73,6 +72,23 @@ const auctionController = {
             }
         } catch (err) {
             console.error("Error deleting Auction", err);
+            res.status(500).json({error: "Internal server error"})
+        }
+    },
+    async addBid(req,res){
+        try{
+            const auctionId = req.params.id;
+            const userId = req.user.userId;
+            const bid = req.body;
+            const bidJson =  {bid, userId};
+            console.log(auctionId,bid,userId)
+            const result = auctionModel.addBid(auctionId, bid);
+            if (result){
+                res.status(200).json({message: "Bid added successfully"})
+            } else{
+                res.status(404).json({error: "Auction not found"})
+            }
+        } catch (err){
             res.status(500).json({error: "Internal server error"})
         }
     }

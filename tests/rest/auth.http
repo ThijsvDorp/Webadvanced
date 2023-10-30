@@ -47,3 +47,17 @@ Authorization: Bearer {{token}}
     {"bidAmount": 3, "userId": "3"}
   ]
 }
+###
+POST {{protocol}}{{host}}:{{port}}/auction/1/bid
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {{token}}
+
+{
+  "bidAmount": 100,
+  "userId": 2
+}
+###
+GET {{protocol}}{{host}}:{{port}}/auction/1
+Accept: application/json
+Authorization: Bearer {{token}}

@@ -9,4 +9,5 @@ router.get('/:id', loggedIn ,auctionController.getAuctionById); //Getting one au
 router.post('/', loggedIn ,auctionController.addAuction); // Creating a new auction
 router.patch('/:id', loggedIn, isAdmin, auctionController.updateAuction); //Update an auction
 router.delete('/:id',loggedIn, isAdmin, auctionController.deleteAuction); // Delete an auction
+router.post('/:id/bid', loggedIn, auctionController.addBid);
 export default router;
