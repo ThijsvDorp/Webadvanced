@@ -9,12 +9,15 @@ const userModel = {
     async hashPassword(password) {
         return bcrypt.hash(password, 10);
     },
-    findUser(username){
+    async findUser(username){
        return users.find(username);
     },
 
-    findPassword(password){
+    async findPassword(password){
         return users.find(password);
+    },
+    async getUsers(){
+        return users;
     }
 }
 export default userModel;

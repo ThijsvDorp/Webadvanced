@@ -10,8 +10,7 @@ const auctionController = {
             } else {
                 res.status(404).json({error: "Auctions not found"});
             }
-        } catch(err){
-            console.error("Error getting auctions", err);
+        } catch (err){
             res.status(500).json({error: "Internal server error"});
         }
     },

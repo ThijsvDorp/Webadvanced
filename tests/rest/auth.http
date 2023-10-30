@@ -61,3 +61,7 @@ Authorization: Bearer {{token}}
 GET {{protocol}}{{host}}:{{port}}/auction/1
 Accept: application/json
 Authorization: Bearer {{token}}
+###
+GET {{protocol}}{{host}}:{{port}}/user/users
+Accept: application/json
+Authorization: Bearer {{token}}

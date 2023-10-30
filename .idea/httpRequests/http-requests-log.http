@@ -1,3 +1,42 @@
+GET http://localhost:3000/user/users
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2OTk5MDYsImV4cCI6MTY5ODcwMDgwNn0.dVm3bPo-Ha5UfGaH4hYwe4Up4gfe53MREQ7-_A153tw
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T220508.200.json
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+Accept: application/json
+Content-Length: 51
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "password"
+}
+
+<> 2023-10-30T220506.200.json
+
+###
+
+GET http://localhost:3000/user/users
+Accept: application/json
+Authorization: Bearer {{token}}
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-10-30T220503.403.json
+
+###
+
 GET http://localhost:3000/auction/1
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2Nzg4NTAsImV4cCI6MTY5ODY3OTc1MH0.jjiyNBSkCH3nVX-DprTNJeh75WiSZRx5j5qKYP8yXEY
@@ -686,47 +725,6 @@ User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
 <> 2023-10-30T152054.200.json
-
-###
-
-POST http://localhost:3000/auction/1/bid
-Content-Type: application/json
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU2NTEsImV4cCI6MTY5ODY3NjU1MX0.znVmynmOuV35yBY7KMVbiyQvPXHUDR-Pz6nJQiUzalo
-Content-Length: 0
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-30T152053.200.json
-
-###
-
-POST http://localhost:3000/user/login
-Content-Type: application/json
-Accept: application/json
-Content-Length: 51
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "username": "admin",
-  "password": "password"
-}
-
-<> 2023-10-30T152051.200.json
-
-###
-
-GET http://localhost:3000/auction/1
-Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTg2NzU1NTIsImV4cCI6MTY5ODY3NjQ1Mn0.95pC3SgFVPCuXfP0DxT7LM0uhdbznrMQeeRoL4cEOHk
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2023-10-30T152047.403.json
 
 ###
 
