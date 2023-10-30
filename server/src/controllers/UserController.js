@@ -27,7 +27,9 @@ const userController = {
 
     async logOut(req,res) {
     try{
-        const token = req.headers.authorization;
+        const authHeader = req.headers.authorization;
+        const token = authHeader && authHeader.split(' ')[1];
+        console.log(token)
         invalidTokens.push(token);
         res.status(204).json({message: "Logged out.."})
     } catch (err){
