@@ -24,7 +24,6 @@ const userController = {
        return res.status(500).json({message: "Internal server error" });
     }
 },
-
     async logOut(req,res) {
     try{
         const authHeader = req.headers.authorization;
@@ -35,8 +34,10 @@ const userController = {
     } catch (err){
         res.status(500).json({error: "Internal server error"})
     }
-    }
+    },
+    async getUsers(req,res){
 
+    }
 }
 
 export default userController;

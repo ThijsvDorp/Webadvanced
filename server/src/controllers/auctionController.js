@@ -84,7 +84,7 @@ const auctionController = {
             console.log(auctionId,bid,userId)
             const result = auctionModel.addBid(auctionId, bid);
             if (result){
-                res.status(200).json({message: "Bid added successfully"})
+                res.status(204).json({message: "Bid added successfully"})
             } else{
                 res.status(404).json({error: "Auction not found"})
             }
