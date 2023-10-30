@@ -84,7 +84,7 @@ Screens for managing users and items have been omitted.
 ![](assets/homepage.jpeg)
 
 The homepage should show a list of items up for auction. Users should be able to filter and search the items. If a user 
-is not logged in the user should be able to log in. Items should link to the item details page.  
+is not logged in the user should be able to log in. Items should link to the item details page.
 
 ### Details
 
