@@ -30,7 +30,7 @@ const auctionController = {
     },
     async addAuction(req,res){
         try{
-            const auction = req.body;
+            const auction = escapeHtml(req.body);
             const newAuction = await auctionModel.addAuction(auction);
             if (newAuction){
                 console.log("New auction has been added:", newAuction);
@@ -46,10 +46,10 @@ const auctionController = {
     async updateAuction(req,res){
         try{
             const auctionId = req.params.id;
-            const auction = req.body;
+            const auction = escapeHtml(req.body)
             const auctionUpdate = await auctionModel.updateAuction(auctionId, auction);
             console.log(auctionUpdate);
-            if (auctionUpdate === auction){
+            if (String(auctionUpdate) === String(auction)){
                 res.status(200).json({message: "Auction updated successfully"});
             } else {
                 res.status(404).json({error: "Auction not found"})
@@ -78,7 +78,7 @@ const auctionController = {
         try{
             const auctionId = req.params.id;
             const userId = req.user.userId;
-            const bid = req.body;
+            const bid = escapeHtml(req.body);
             const bidJson =  {bid, userId};
             console.log(auctionId,bid,userId)
             const result = auctionModel.addBid(auctionId, bid);

@@ -11,7 +11,7 @@ const userController = {
     async login(req,res){
     try{
         dotenv.config();
-        const {username, password} = req.body
+        const {username, password} = escapeHtml(req.body);
         const hash = await userModel.hashPassword(password);
         const user = users.find((user) => user.username === username)
         if (user || await user.comparePassword(password, hash)){
@@ -28,7 +28,6 @@ const userController = {
     try{
         const authHeader = req.headers.authorization;
         const token = authHeader && authHeader.split(' ')[1];
-        console.log(token)
         invalidTokens.push(token);
         res.status(204).json({message: "Logged out.."})
     } catch (err){

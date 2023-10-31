@@ -1,5 +1,5 @@
 import express from 'express';
-import userController from "../controllers/UserController.js";
+import userController from "../controllers/userController.js";
 import jwt from "jsonwebtoken";
 import loggedIn from "../middleware/logged-in.js";
 import isAdmin from "../middleware/isAdmin.js";

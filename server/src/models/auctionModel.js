@@ -2,15 +2,16 @@ import {auctions} from './db.js';
 
 
 const auctionModel = {
-    getAuctions(){
+
+    async getAuctions(){
         return auctions;
     },
 
-    getAuctionById(auctionId){
+    async getAuctionById(auctionId){
         return auctions.at(auctionId);
     },
 
-    addAuction(jsonAuction){
+    async addAuction(jsonAuction){
         const initLength = auctions.length;
         auctions.push(jsonAuction);
         if (auctions.length > initLength){
@@ -18,7 +19,7 @@ const auctionModel = {
         }
     },
 
-    updateAuction(auctionId, jsonAuction){
+    async updateAuction(auctionId, jsonAuction){
         const oldValue = auctions[auctionId];
         if (auctions[auctionId] !== oldValue || auctionId < auctions.length){
             auctions[auctionId] = jsonAuction;
@@ -26,7 +27,7 @@ const auctionModel = {
         }
     },
 
-    deleteAuction(auctionId){
+    async deleteAuction(auctionId){
         const index = auctions.findIndex(auction => auction.id === Number(auctionId))
         console.log("Index delete auction: ",index)
         if (index !== -1){
@@ -36,7 +37,7 @@ const auctionModel = {
         }
             return false;
     },
-    addBid(auctionId, bid){
+    async addBid(auctionId, bid){
         const auction = auctions.at(auctionId);
         console.log(bid)
         auction.bids.push(bid);
