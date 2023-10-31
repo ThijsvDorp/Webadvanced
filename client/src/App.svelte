@@ -1,5 +1,4 @@
 <script>
-  import logo from './assets/svelte.png';
   import router from 'page';
 
   import Home from "./pages/Home.svelte";
@@ -8,23 +7,25 @@
 
   let page;
   let params;
-  let currentRoute;
 
-  router('/', (ctx) => {
-    page = Home;
-    currentRoute = ctx.pathname;
-  });
-  router('/about', (ctx) => {
-    page = About;
-    currentRoute = ctx.pathname;
-  });
+  function setPage(newPage){
+    page = newPage;
+  }
 
-  router.start();
+  function setParams(newParams){
+    params = newParams;
+  }
+  onMount(async () =>{
+    const token = localStorage.getItem('token');
+    if (token){
+      try {
+        await
+      }
+    }
+  })
 </script>
 
 <main>
-  <img src={logo} alt="Svelte Logo" />
-  <Header active={currentRoute} />
   <svelte:component this={page} {params} />
 </main>
 

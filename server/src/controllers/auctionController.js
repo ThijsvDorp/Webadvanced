@@ -6,6 +6,7 @@ const auctionController = {
         try{
             const auctions = await auctionModel.getAuctions();
             if (auctions){
+                console.log("Getting auctions...")
                 res.status(200).json(auctions);
             } else {
                 res.status(404).json({error: "Auctions not found"});

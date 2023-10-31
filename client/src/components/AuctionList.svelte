@@ -34,10 +34,9 @@
         },*/
     ];
     onMount(async () => {
-        const response = await auctionApi.getAllAuctions(); // Fetch data from the API
-        console.log("Test");
+        const response = await auctionApi.getAllAuctions()
         if (response.ok) {
-            auctions = await response.json();
+            auctions = response.json();
         }
     });
 </script>

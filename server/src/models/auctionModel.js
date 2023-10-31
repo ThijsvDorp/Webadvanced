@@ -42,6 +42,13 @@ const auctionModel = {
         console.log(bid)
         auction.bids.push(bid);
         return auction.bids.includes(bid);
+    },
+    async getHighestBid(auction){
+        if (!auction.bids || auction.bids.length === 0){
+            return 0;
+        } else {
+            return Math.max(...auction.bids.map(bid => bid.bidAmount))
+        }
     }
 }
 export default auctionModel;

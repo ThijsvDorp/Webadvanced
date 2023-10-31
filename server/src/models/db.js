@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 import userModel from "./userModel.js";
 
-const auctions= [
+let auctions= [
     {
       id: 1,
       name: "Auction 1",
@@ -62,7 +62,7 @@ const auctions= [
 
 ];
 const password = await bcrypt.hash("password",10);
-const users = [];
+let users = [];
 
 users.push({
     id: 1,
@@ -77,7 +77,7 @@ users.push({
     password: password,
     role: "admin"
 })
-const invalidTokens = [];
+let invalidTokens = [];
 
 export {auctions,users, invalidTokens};
 
